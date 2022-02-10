@@ -101,3 +101,9 @@ class XboxController(object):
                 elif event.code == 'ABS_HAT0Y':
                     self.DPadY = event.state
 
+if __name__ == '__main__':
+    joy = XboxController()
+    while True:
+        print(joy.readMainButtons())
+        print(joy.readTriggers())
+        print(joy.readAnalogSticks())
